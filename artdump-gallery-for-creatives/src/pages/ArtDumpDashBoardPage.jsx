@@ -1,6 +1,7 @@
 import React from "react";
 import ArtDumpNavBar from "../components/ArtDumpNavBar";
 import ArtDumpArtWorkCard from "../components/ArtDumpArtWorkCard";
+import ArtDumpArtistStats from "../components/ArtDumpArtistStats";
 
 function ArtDumpDashBoardPage() {
   return (
@@ -17,6 +18,15 @@ function ArtDumpDashBoardPage() {
             Recent Upload
           </h2>
           <ArtDumpArtWorkCard />
+          <h2 className="pt-2 pl-5 text-[36px] font-semibold text-[#372F3D]">
+            Artist Stats
+          </h2>
+          <ArtDumpArtistStats artistStatTitle="Total artworks" artistStat="4" />
+          <ArtDumpArtistStats
+            artistStatTitle="Most used category"
+            artistStat=""
+          />
+          <ArtDumpArtistStats artistStatTitle="Most used tool" artistStat="" />
         </div>
       </div>
     </>
