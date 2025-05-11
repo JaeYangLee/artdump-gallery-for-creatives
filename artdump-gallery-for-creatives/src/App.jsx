@@ -1,9 +1,10 @@
+import ArtDumpDashBoardPage from "../src/pages/ArtDumpDashBoardPage.jsx";
 import "./index.css";
 
 function App() {
   return (
     <>
-      <div>Hello World!</div>
+      <ArtDumpDashBoardPage />
     </>
   );
 }
