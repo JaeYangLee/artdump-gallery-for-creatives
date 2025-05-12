@@ -1,10 +1,10 @@
-import ArtDumpDashBoardPage from "../src/pages/ArtDumpDashBoardPage.jsx";
 import "./index.css";
+import ArtDumpsterHeroSectionPage from "./pages/ArtDumpsterHeroSectionPage";
 
 function App() {
   return (
     <>
-      <ArtDumpDashBoardPage />
+      <ArtDumpsterHeroSectionPage />
     </>
   );
 }
