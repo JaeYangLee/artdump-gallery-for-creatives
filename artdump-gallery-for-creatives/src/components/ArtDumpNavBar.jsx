@@ -1,5 +1,5 @@
 import React from "react";
-import ArtDumpsterBrandNameLogo from "../assets/ArtDumpster_ Brand Name Logo";
+import ArtDumpsterBrandNameLogo from "../assets/ArtDumpsterBrandNameLogo";
 
 function ArtDumpNavBar() {
   return (
@@ -7,15 +7,15 @@ function ArtDumpNavBar() {
       {/* Body */}
       <div className="bg-[#F8FAFC]">
         {/* NavBar */}
-        <div className="pr-12 pl-12 flex flex-row items-center max-w-[1440px] h-[56px] border shadow-xl">
+        <div className="fixed top-0 pr-12 pl-12 flex flex-row items-center w-full h-[56px] border shadow-md z-50">
           {/* Right Section */}
-          <div className="w-1/3 text-[14px]">
+          <div className="w-1/3 text-[14px] border-transparent hover:cursor-pointer hover:-translate-y-[4px] transition-all duration-200 ease-linear">
             <ArtDumpsterBrandNameLogo />
           </div>
 
           {/* Middle Section */}
           <div className="w-1/3 p-4 flex flex-row justify-center items-center gap-8 font-barlow font-medium text-[14px] text-[#372F3D]">
-            <div className="flex flex-col items-center">
+            <div className="px-2 py-2 transform flex flex-col items-center border border-transparent rounded hover:bg-[#372F3D] hover:text-[#F8FAFC] hover:cursor-pointer hover:w-auto hover:h-auto hover:border hover:-translate-y-[2px] transition-all duration-200 ease-linear active:bg-[#2C2631] active:text-[#959697]">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -28,7 +28,7 @@ function ArtDumpNavBar() {
 
               <button>Home</button>
             </div>
-            <div className="flex flex-col items-center">
+            <div className="px-2 py-2 transform flex flex-col items-center border border-transparent rounded hover:bg-[#372F3D] hover:text-[#F8FAFC] hover:cursor-pointer hover:w-auto hover:h-auto hover:border hover:-translate-y-[2px] transition-all duration-200 ease-linear active:bg-[#2C2631] active:text-[#959697]">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -40,7 +40,7 @@ function ArtDumpNavBar() {
 
               <button>My dumpster</button>
             </div>
-            <div className="flex flex-col items-center">
+            <div className="px-2 py-2 transform flex flex-col items-center border border-transparent rounded hover:bg-[#372F3D] hover:text-[#F8FAFC] hover:cursor-pointer hover:w-auto hover:h-auto hover:border hover:-translate-y-[2px] transition-all duration-200 ease-linear active:bg-[#2C2631] active:text-[#959697]">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -56,7 +56,7 @@ function ArtDumpNavBar() {
 
               <button>Profile</button>
             </div>
-            <div className="flex flex-col items-center">
+            <div className="px-2 py-2 transform flex flex-col items-center border border-transparent rounded hover:bg-[#372F3D] hover:text-[#F8FAFC] hover:cursor-pointer hover:w-auto hover:h-auto hover:border hover:-translate-y-[2px] transition-all duration-200 ease-linear active:bg-[#2C2631] active:text-[#959697]">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -75,7 +75,7 @@ function ArtDumpNavBar() {
           </div>
           {/* Left Section */}
           <div className="w-1/3 flex justify-end text-[14px] font-barlow font-medium text-[#372F3D]">
-            <div className="flex flex-col items-center">
+            <div className="px-2 py-2 transform flex flex-col items-center border border-transparent rounded hover:bg-[#372F3D] hover:text-[#F8FAFC] hover:cursor-pointer hover:w-auto hover:h-auto hover:border hover:-translate-y-[2px] transition-all duration-200 ease-linear active:bg-[#2C2631] active:text-[#959697]">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
