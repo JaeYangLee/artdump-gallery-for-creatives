@@ -49,12 +49,12 @@ function ArtDumpNavBar() {
               >
                 <path
                   fill-rule="evenodd"
-                  d="M7.5 6a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM3.751 20.105a8.25 8.25 0 0 1 16.498 0 .75.75 0 0 1-.437.695A18.683 18.683 0 0 1 12 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 0 1-.437-.695Z"
+                  d="M19.5 21a3 3 0 0 0 3-3V9a3 3 0 0 0-3-3h-5.379a.75.75 0 0 1-.53-.22L11.47 3.66A2.25 2.25 0 0 0 9.879 3H4.5a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h15Zm-6.75-10.5a.75.75 0 0 0-1.5 0v2.25H9a.75.75 0 0 0 0 1.5h2.25v2.25a.75.75 0 0 0 1.5 0v-2.25H15a.75.75 0 0 0 0-1.5h-2.25V10.5Z"
                   clip-rule="evenodd"
                 />
               </svg>
 
-              <button>Profile</button>
+              <button>Add artwork</button>
             </div>
             <div className="px-2 py-2 transform flex flex-col items-center border border-transparent rounded hover:bg-[#372F3D] hover:text-[#F8FAFC] hover:cursor-pointer hover:w-auto hover:h-auto hover:border hover:-translate-y-[2px] transition-all duration-200 ease-linear active:bg-[#2C2631] active:text-[#959697]">
               <svg
@@ -65,12 +65,12 @@ function ArtDumpNavBar() {
               >
                 <path
                   fill-rule="evenodd"
-                  d="M19.5 21a3 3 0 0 0 3-3V9a3 3 0 0 0-3-3h-5.379a.75.75 0 0 1-.53-.22L11.47 3.66A2.25 2.25 0 0 0 9.879 3H4.5a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h15Zm-6.75-10.5a.75.75 0 0 0-1.5 0v2.25H9a.75.75 0 0 0 0 1.5h2.25v2.25a.75.75 0 0 0 1.5 0v-2.25H15a.75.75 0 0 0 0-1.5h-2.25V10.5Z"
+                  d="M7.5 6a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM3.751 20.105a8.25 8.25 0 0 1 16.498 0 .75.75 0 0 1-.437.695A18.683 18.683 0 0 1 12 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 0 1-.437-.695Z"
                   clip-rule="evenodd"
                 />
               </svg>
 
-              <button>Add artwork</button>
+              <button>Profile</button>
             </div>
           </div>
           {/* Left Section */}
