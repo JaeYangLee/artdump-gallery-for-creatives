@@ -8,7 +8,7 @@ function ArtDumpsterMyDumpsterPage() {
       <div>
         <ArtDumpNavBar />
       </div>
-      <div></div>
+      <div className="pl-8 pt-[64px]">Hello World!</div>
       <div></div>
       {/* Grid Background SVG */}
       <img
