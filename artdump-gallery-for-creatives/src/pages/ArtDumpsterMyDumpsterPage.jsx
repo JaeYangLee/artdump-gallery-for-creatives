@@ -23,7 +23,7 @@ function ArtDumpsterMyDumpsterPage() {
       </div>
       {/* ArtworkGallery Parent Container */}
       <div className="pl-8 flex w-full h-full">
-        <ArtDumpArtworkCard />
+        <ArtDumpsterProjectDisplayModal />
       </div>
       {/* Grid Background SVG */}
       <img

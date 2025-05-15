@@ -11,7 +11,15 @@ function ArtDumpsterProjectDisplayModal() {
         {/* Container */}
         <div className="flex flex-row w-[1350px] h-[895px] bg-[#F8FAFC]">
           {/* Left Section */}
-          <div></div>
+          {/* Artwork container */}
+          <div className="bg-[lightgray] w-[870px] h-[895px]">
+            <img
+              src="src/assets/shikamaruImageSample.jpg"
+              alt=""
+              width="870px"
+              height="895px"
+            />
+          </div>
         </div>
       </div>
     </>
