@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import ArtDumpNavBar from "../components/ArtDumpNavBar";
 import ArtDumpArtworkCard from "../components/ArtDumpArtworkCard";
+import ArtDumpsterProjectDisplayModal from "../components/ArtDumpsterProjectDisplayModal";
 
 function ArtDumpsterMyDumpsterPage() {
   return (
@@ -21,7 +22,7 @@ function ArtDumpsterMyDumpsterPage() {
         </div>
       </div>
       {/* ArtworkGallery Parent Container */}
-      <div className="pl-8 flex w-[1440px] h-screen">
+      <div className="pl-8 flex w-full h-full">
         <ArtDumpArtworkCard />
       </div>
       {/* Grid Background SVG */}

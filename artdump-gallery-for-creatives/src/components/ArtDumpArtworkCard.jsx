@@ -1,16 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 
-function ArtDumpArtworkCard(
-  projectThumbnail,
-  projectTitle,
-  projectStatus,
-  datePublished,
-  projectColorStatus
-) {
+function ArtDumpArtworkCard() {
+  let [showModal, setShowModal] = useState(false);
+
+  function handleShowModal() {
+    setShowModal(true);
+    console.log("Clicked!");
+  }
   return (
     <>
       {/* Artwork Card Container */}
-      <div className="m-2 w-[430.46px] h-[379.8px] bg-[#F8FAFC] text-[#372F3D] transition-all duration-300 ease-in-out hover:text-[#F8FAFC] shadow-xl/20 relative overflow-hidden group">
+      <div
+        onClick={handleShowModal}
+        className="m-2 w-[430.46px] h-[379.8px] bg-[#F8FAFC] text-[#372F3D] transition-all duration-300 ease-in-out  shadow-xl/20 relative overflow-hidden group hover:text-[#F8FAFC] active:w-[410.46px] active-h[359.8px] active:duration-300"
+      >
         {/* Image Thumbnail with Gradient */}
         <div className="relative w-full h-[300px] transition-all duration-300 ease-in-out">
           <img
@@ -23,7 +26,7 @@ function ArtDumpArtworkCard(
         <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0  ease-in-out hover:opacity-100 transition-opacity duration-300 z-10"></div>
 
         {/* Artwork Basic Details */}
-        <div className="px-4 pt-2 pb-0 flex flex-row justify-between z-20 relative">
+        <div className="px-4 pt-4 pb-0 flex flex-row justify-between z-20 relative">
           <p className="font-barlow text-[14px] font-bold">Project Title</p>
           <p className="font-barlow text-[14px] font-bold">Status</p>
         </div>
