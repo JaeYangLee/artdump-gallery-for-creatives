@@ -1,17 +1,13 @@
 import React, { useState } from "react";
+import ArtDumpsterProjectDisplayModal from "../components/ArtDumpsterProjectDisplayModal";
 
 function ArtDumpArtworkCard() {
-  let [showModal, setShowModal] = useState(false);
-
-  function handleShowModal() {
-    setShowModal(true);
-    console.log("Clicked!");
-  }
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <>
       {/* Artwork Card Container */}
       <div
-        onClick={handleShowModal}
+        onClick={() => setIsOpen(true)}
         className="m-2 w-[430.46px] h-[379.8px] bg-[#F8FAFC] text-[#372F3D] transition-all duration-300 ease-in-out  shadow-xl/20 relative overflow-hidden group hover:text-[#F8FAFC] active:w-[410.46px] active-h[359.8px] active:duration-300"
       >
         {/* Image Thumbnail with Gradient */}
@@ -46,6 +42,11 @@ function ArtDumpArtworkCard() {
           </svg>
         </div>
       </div>
+      {/* Project Display Modal */}
+      <ArtDumpsterProjectDisplayModal
+        isOpen={isOpen}
+        onClose={() => setIsOpen(false)}
+      />
     </>
   );
 }

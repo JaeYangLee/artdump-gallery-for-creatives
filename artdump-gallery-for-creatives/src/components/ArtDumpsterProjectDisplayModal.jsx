@@ -1,71 +1,62 @@
 import React from "react";
 
-function ArtDumpsterProjectDisplayModal() {
-  const Modal = ({ isOpen, onClose, children }) => {
-    if (!isOpen) return null;
-  };
+function ArtDumpsterProjectDisplayModal({ isOpen, onClose, children }) {
+  if (!isOpen) return null;
   return (
     <>
       {/* body */}
-      <div>
+      <div className="fixed inset-0 z-50 bg-black/70 flex items-center justify-center p-8">
         {/* Container */}
-        <div className="flex flex-row w-[1350px] h-[895px] bg-[#F8FAFC]">
+        <div className="flex flex-row w-[90vw] h-[80vh] max-w-[1100px] max-h-[720px] bg-[#F8FAFC]">
           {/* Left Section Container */}
           {/* Artwork container */}
-          <div className="bg-[lightgray] w-[870px] h-full">
+          <div className="w-2/3 h-full bg-[lightgray]">
             <img
               src="src/assets/shikamaruImageSample.jpg"
               alt="Artwork Image"
               width="870px"
               height="895px"
-              className="object-fill"
             />
           </div>
           {/* Right Section Container */}
           {/* project details container */}
-          <div className="">
+          <div className="w-1/3 h-full overflow-y-auto p-6 bg-white">
             {/* Header */}
-            <div className="p-4 flex flex-row items-center gap-60">
-              <h1 className="font-barlow text-[28px] text-[#372F3D] font-bold">
+            <div className="flex justify-between items-center mb-4">
+              <h1 className="font-barlow text-xl text-[#372F3D] font-bold">
                 Project Title
               </h1>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="32"
-                height="32"
+                width="28"
+                height="28"
                 viewBox="0 0 28 28"
                 fill="#372F3D"
-                className=""
               >
                 <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
                   d="M5.25 14C5.25 13.0335 6.0335 12.25 7 12.25C7.9665 12.25 8.75 13.0335 8.75 14C8.75 14.9665 7.9665 15.75 7 15.75C6.0335 15.75 5.25 14.9665 5.25 14ZM12.25 14C12.25 13.0335 13.0335 12.25 14 12.25C14.9665 12.25 15.75 13.0335 15.75 14C15.75 14.9665 14.9665 15.75 14 15.75C13.0335 15.75 12.25 14.9665 12.25 14ZM19.25 14C19.25 13.0335 20.0335 12.25 21 12.25C21.9665 12.25 22.75 13.0335 22.75 14C22.75 14.9665 21.9665 15.75 21 15.75C20.0335 15.75 19.25 14.9665 19.25 14Z"
                   fill="#0F172A"
                 />
               </svg>
             </div>
-            <hr className="w-[480px]" />
-            {/* Project Description Container */}
-            <div className="p-4">
-              {/* Project Description */}
-              <div className="flex justify-center border rounded-xl w-[440px] h-[560px]">
-                <p className="p-4 font-barlow font-light italic text-[14px]">
-                  "This digital portrait captures a quiet, introspective moment,
-                  inspired by soft afternoon light and muted tones. I focused on
-                  rendering subtle facial expressions and delicate brush strokes
-                  to give the piece an emotional depth. Created using Procreate,
-                  this artwork was part of my ongoing study in lighting and
-                  facial anatomy. I experimented with textured brushes to add a
-                  painterly feel while keeping the overall look clean and
-                  modern."
-                </p>
-              </div>
+
+            <hr className="mb-4" />
+
+            {/* Project Description */}
+            <div className="mb-6 border rounded-xl h-[260px] p-4 overflow-y-auto">
+              <p className="font-barlow font-light italic text-sm">
+                "This digital portrait captures a quiet, introspective moment,
+                inspired by soft afternoon light and muted tones. I focused on
+                rendering subtle facial expressions and delicate brush strokes
+                to give the piece an emotional depth..."
+              </p>
             </div>
 
-            {/* project status & icon */}
-            <div className="pt-8 p-2 flex flex-row items-center gap-85">
-              <h2 className="pl-4 font-barlow font-medium text-[24px] text-[#372F3D]">
+            {/* Status Section */}
+            <div className="flex items-center justify-between mb-4">
+              <h2 className="font-barlow font-medium text-lg text-[#372F3D]">
                 Status
               </h2>
               <svg
@@ -74,29 +65,27 @@ function ArtDumpsterProjectDisplayModal() {
                 height="18"
                 viewBox="0 0 18 18"
                 fill="none"
-                className="flex justify-center items-center"
               >
                 <circle cx="9" cy="9" r="9" fill="#737373" />
               </svg>
             </div>
-            <hr className="w-[480px]" />
 
-            {/* project details */}
-            <div className="pl-8 p-6 flex flex-col justify-center font-barlow text-[20px]">
-              <ul>
-                <div className="flex flex-row items-center gap-2">
-                  <li className="font-medium">• Published:</li>
-                  <li>00/00/0000</li>
-                </div>
-                <div className="flex flex-row items-center gap-2">
-                  <li className="font-medium">• Medium:</li>
-                  <li>Digital</li>
-                </div>
-                <div className="flex flex-row items-center gap-2">
-                  <li className="font-medium">• Genre:</li>
-                  <li>Portrait</li>
-                </div>
-              </ul>
+            <hr className="mb-4" />
+
+            {/* Project Details */}
+            <div className="font-barlow text-base space-y-2">
+              <div className="flex gap-2">
+                <span className="font-medium">• Published:</span>
+                <span>00/00/0000</span>
+              </div>
+              <div className="flex gap-2">
+                <span className="font-medium">• Medium:</span>
+                <span>Digital</span>
+              </div>
+              <div className="flex gap-2">
+                <span className="font-medium">• Genre:</span>
+                <span>Portrait</span>
+              </div>
             </div>
           </div>
         </div>
