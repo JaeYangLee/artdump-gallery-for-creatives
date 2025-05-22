@@ -1,6 +1,13 @@
+import React, { useState } from "react";
 import ArtDumpNavBar from "../components/ArtDumpNavBar";
+import UploadImageSuccessModal from "../components/UploadImageSuccessModal";
+import CancelValidatorModal from "../components/CancelValidatorModal";
 
 function ArtDumpsterAddArtworkPage() {
+  const [isUploadImageSuccessModalOpen, setIsUploadImageSuccessModalOpen] =
+    useState(false);
+  const [isCancelValidatorModalOpen, setIsCancelValidatorModalOpen] =
+    useState(false);
   return (
     <>
       {/* NavBar */}
@@ -35,7 +42,10 @@ function ArtDumpsterAddArtworkPage() {
               <h2 className="text-xl text-[#372F3D]">Drop files to upload</h2>
               <div className="flex flex-row gap-1">
                 <h2 className="text-xl text-[#372F3D]">or</h2>
-                <h2 className="text-xl text-purple-500 hover:text-[#7939cc] hover:underline active:text-[#5b2b99]">
+                <h2
+                  onClick={() => setIsUploadImageSuccessModalOpen(true)}
+                  className="text-xl text-purple-500 hover:text-[#7939cc] hover:underline active:text-[#5b2b99]"
+                >
                   upload
                 </h2>
               </div>
@@ -101,10 +111,16 @@ function ArtDumpsterAddArtworkPage() {
               </select>
               {/* Buttons */}
               <div className="mt-4 flex flex-row justify-end items-end gap-2 text-[14px]">
-                <button className="p-2 w-[101px] bg-[#9747FF] text-amber-50 font-semibold border rounded-md transition-all duration-100 ease-in hover:bg-[#7939cc] active:bg-[#5b2b99]">
+                <button
+                  onClick={() => setIsUploadImageSuccessModalOpen(true)}
+                  className="p-2 w-[101px] bg-[#9747FF] text-amber-50 font-semibold border rounded-md transition-all duration-100 ease-in hover:bg-[#7939cc] active:bg-[#5b2b99]"
+                >
                   Upload
                 </button>
-                <button className="p-2 w-[101px] bg-[#EEF0F2] border-gray-500/50 text-[#372F3D]/50 font-semibold border rounded-md transition-all duration-100 ease-in hover:bg-[rgb(200,202,204)] active:bg-[rgb(161,163,165)] active:text-[#EEF0F2]">
+                <button
+                  onClick={() => setIsCancelValidatorModalOpen(true)}
+                  className="p-2 w-[101px] bg-[#EEF0F2] border-gray-500/50 text-[#372F3D]/50 font-semibold border rounded-md transition-all duration-100 ease-in hover:bg-[rgb(200,202,204)] active:bg-[rgb(161,163,165)] active:text-[#EEF0F2]"
+                >
                   Cancel
                 </button>
               </div>
@@ -112,6 +128,18 @@ function ArtDumpsterAddArtworkPage() {
           </div>
         </div>
       </div>
+
+      <UploadImageSuccessModal
+        isUploadImageSuccessModalOpen={isUploadImageSuccessModalOpen}
+        OnUploadImageSuccessModalClose={() =>
+          setIsUploadImageSuccessModalOpen(false)
+        }
+      />
+
+      <CancelValidatorModal
+        isCancelValidatorModalOpen={isCancelValidatorModalOpen}
+        OnCancelValidatorModalClose={() => setIsCancelValidatorModalOpen(false)}
+      />
 
       {/* Grid Background SVG */}
       <img
