@@ -1,5 +1,6 @@
 import React from "react";
 import ArtDumpsterBrandNameLogo from "../assets/ArtDumpsterBrandNameLogo";
+import { Link } from "react-router-dom";
 
 function ArtDumpNavBar() {
   return (
@@ -15,47 +16,53 @@ function ArtDumpNavBar() {
 
           {/* Middle Section */}
           <div className="w-1/3 p-4 flex flex-row justify-center items-center gap-8 font-barlow font-medium text-[14px] text-[#372F3D]">
-            <div className="px-2 py-2 transform flex flex-col items-center border border-transparent rounded hover:bg-[#372F3D] hover:text-[#F8FAFC] hover:cursor-pointer hover:w-auto hover:h-auto hover:border hover:-translate-y-[2px] transition-all duration-300 ease-linear active:bg-[#2C2631] active:text-[#959697]">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                class="size-5"
-              >
-                <path d="M11.47 3.841a.75.75 0 0 1 1.06 0l8.69 8.69a.75.75 0 1 0 1.06-1.061l-8.689-8.69a2.25 2.25 0 0 0-3.182 0l-8.69 8.69a.75.75 0 1 0 1.061 1.06l8.69-8.689Z" />
-                <path d="m12 5.432 8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 0 1-.75-.75v-4.5a.75.75 0 0 0-.75-.75h-3a.75.75 0 0 0-.75.75V21a.75.75 0 0 1-.75.75H5.625a1.875 1.875 0 0 1-1.875-1.875v-6.198a2.29 2.29 0 0 0 .091-.086L12 5.432Z" />
-              </svg>
+            <Link to="/">
+              <div className="px-2 py-2 transform flex flex-col items-center border border-transparent rounded hover:bg-[#372F3D] hover:text-[#F8FAFC] hover:cursor-pointer hover:w-auto hover:h-auto hover:border hover:-translate-y-[2px] transition-all duration-300 ease-linear active:bg-[#2C2631] active:text-[#959697]">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  class="size-5"
+                >
+                  <path d="M11.47 3.841a.75.75 0 0 1 1.06 0l8.69 8.69a.75.75 0 1 0 1.06-1.061l-8.689-8.69a2.25 2.25 0 0 0-3.182 0l-8.69 8.69a.75.75 0 1 0 1.061 1.06l8.69-8.689Z" />
+                  <path d="m12 5.432 8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 0 1-.75-.75v-4.5a.75.75 0 0 0-.75-.75h-3a.75.75 0 0 0-.75.75V21a.75.75 0 0 1-.75.75H5.625a1.875 1.875 0 0 1-1.875-1.875v-6.198a2.29 2.29 0 0 0 .091-.086L12 5.432Z" />
+                </svg>
 
-              <button>Home</button>
-            </div>
-            <div className="px-2 py-2 transform flex flex-col items-center border border-transparent rounded hover:bg-[#372F3D] hover:text-[#F8FAFC] hover:cursor-pointer hover:w-auto hover:h-auto hover:border hover:-translate-y-[2px] transition-all duration-300 ease-linear active:bg-[#2C2631] active:text-[#959697]">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                class="size-5"
-              >
-                <path d="M19.5 21a3 3 0 0 0 3-3v-4.5a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3V18a3 3 0 0 0 3 3h15ZM1.5 10.146V6a3 3 0 0 1 3-3h5.379a2.25 2.25 0 0 1 1.59.659l2.122 2.121c.14.141.331.22.53.22H19.5a3 3 0 0 1 3 3v1.146A4.483 4.483 0 0 0 19.5 9h-15a4.483 4.483 0 0 0-3 1.146Z" />
-              </svg>
+                <button>Home</button>
+              </div>
+            </Link>
+            <Link to="/MyDumpsterPage">
+              <div className="px-2 py-2 transform flex flex-col items-center border border-transparent rounded hover:bg-[#372F3D] hover:text-[#F8FAFC] hover:cursor-pointer hover:w-auto hover:h-auto hover:border hover:-translate-y-[2px] transition-all duration-300 ease-linear active:bg-[#2C2631] active:text-[#959697]">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  class="size-5"
+                >
+                  <path d="M19.5 21a3 3 0 0 0 3-3v-4.5a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3V18a3 3 0 0 0 3 3h15ZM1.5 10.146V6a3 3 0 0 1 3-3h5.379a2.25 2.25 0 0 1 1.59.659l2.122 2.121c.14.141.331.22.53.22H19.5a3 3 0 0 1 3 3v1.146A4.483 4.483 0 0 0 19.5 9h-15a4.483 4.483 0 0 0-3 1.146Z" />
+                </svg>
 
-              <button>My dumpster</button>
-            </div>
-            <div className="px-2 py-2 transform flex flex-col items-center border border-transparent rounded hover:bg-[#372F3D] hover:text-[#F8FAFC] hover:cursor-pointer hover:w-auto hover:h-auto hover:border hover:-translate-y-[2px] transition-all duration-300 ease-linear active:bg-[#2C2631] active:text-[#959697]">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                class="size-5"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M19.5 21a3 3 0 0 0 3-3V9a3 3 0 0 0-3-3h-5.379a.75.75 0 0 1-.53-.22L11.47 3.66A2.25 2.25 0 0 0 9.879 3H4.5a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h15Zm-6.75-10.5a.75.75 0 0 0-1.5 0v2.25H9a.75.75 0 0 0 0 1.5h2.25v2.25a.75.75 0 0 0 1.5 0v-2.25H15a.75.75 0 0 0 0-1.5h-2.25V10.5Z"
-                  clip-rule="evenodd"
-                />
-              </svg>
+                <button>My dumpster</button>
+              </div>
+            </Link>
+            <Link to="/AddArtworkPage">
+              <div className="px-2 py-2 transform flex flex-col items-center border border-transparent rounded hover:bg-[#372F3D] hover:text-[#F8FAFC] hover:cursor-pointer hover:w-auto hover:h-auto hover:border hover:-translate-y-[2px] transition-all duration-300 ease-linear active:bg-[#2C2631] active:text-[#959697]">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  class="size-5"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M19.5 21a3 3 0 0 0 3-3V9a3 3 0 0 0-3-3h-5.379a.75.75 0 0 1-.53-.22L11.47 3.66A2.25 2.25 0 0 0 9.879 3H4.5a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h15Zm-6.75-10.5a.75.75 0 0 0-1.5 0v2.25H9a.75.75 0 0 0 0 1.5h2.25v2.25a.75.75 0 0 0 1.5 0v-2.25H15a.75.75 0 0 0 0-1.5h-2.25V10.5Z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
 
-              <button>Add artwork</button>
-            </div>
+                <button>Add artwork</button>
+              </div>
+            </Link>
             <div className="px-2 py-2 transform flex flex-col items-center border border-transparent rounded hover:bg-[#372F3D] hover:text-[#F8FAFC] hover:cursor-pointer hover:w-auto hover:h-auto hover:border hover:-translate-y-[2px] transition-all duration-300 ease-linear active:bg-[#2C2631] active:text-[#959697]">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
