@@ -17,7 +17,7 @@ function CancelValidatorModal({
           {/* Modal Container*/}
           <motion.div
             onClick={(e) => e.stopPropagation()}
-            className="p-4 flex flex-col justify-center items-center w-[465px] h-[480px] bg-[#F8FAFC] font-barlow text-[#372F3D] shadow-xl"
+            className="flex flex-col justify-center items-center w-[420px] h-[480px] bg-[#F8FAFC] font-barlow text-[#372F3D] shadow-xl"
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{
@@ -28,8 +28,8 @@ function CancelValidatorModal({
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
-              fill="currentColor"
-              className="w-[200px] h-[200px] text-purple-500"
+              fill="#fb2c36"
+              className="w-[200px] h-[200px]"
             >
               <path
                 fill-rule="evenodd"
@@ -44,16 +44,16 @@ function CancelValidatorModal({
               Canceling now will discard any unsaved progress.
             </p>
             <p className="text-[18px]">Still want to go back?</p>
-            <div className="mt-24 pr-8 pb-4 flex flex-row self-end gap-4">
+            <div className="mt-8 mb-4 flex flex-col gap-2">
               <button
                 onClick={OnCancelValidatorModalClose}
-                className="p-2 w-[120px] bg-[#EEF0F2] font-bold text-[#372F3D]/50 border-2 border-[#372F3D]/10 rounded-2xl shadow-md hover:bg-[rgb(200,202,204)] active:bg-[rgb(161,163,165)] active:text-[#EEF0F2]"
+                className="p-2 w-[239px] bg-[#EEF0F2] border-gray-500/50 font-bold  text-[#372F3D]/50 border rounded-2xl shadow-md hover:bg-[rgb(200,202,204)] active:bg-[rgb(161,163,165)] active:text-[#EEF0F2]"
               >
                 No
               </button>
               <button
                 onClick={OnCancelValidatorModalClose}
-                className="p-2 w-[120px] bg-purple-500 font-bold text-[#F8FAFC] border border-transparent rounded-2xl shadow-md hover:bg-[#7939cc] active:bg-[#5b2b99]"
+                className="p-2 w-[239px] bg-[#9747FF] font-bold text-[#F8FAFC] border border-transparent rounded-2xl shadow-md hover:bg-[#7939cc] active:bg-[#5b2b99]"
               >
                 Yes
               </button>
