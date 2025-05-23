@@ -47,7 +47,7 @@ function CancelValidatorModal({
             <div className="mt-8 mb-4 flex flex-col gap-2">
               <button
                 onClick={OnCancelValidatorModalClose}
-                className="p-2 w-[239px] bg-[#EEF0F2] border-gray-500/50 font-bold  text-[#372F3D]/50 border rounded-2xl shadow-md hover:bg-[rgb(200,202,204)] active:bg-[rgb(161,163,165)] active:text-[#EEF0F2]"
+                className="p-2 w-[239px] bg-[#EEF0F2] border-gray-500/15 font-bold  text-[#372F3D]/40 border rounded-2xl shadow-md hover:bg-[rgb(200,202,204)] active:bg-[rgb(161,163,165)] active:text-[#EEF0F2]"
               >
                 No
               </button>

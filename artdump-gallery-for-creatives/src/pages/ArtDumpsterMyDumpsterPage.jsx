@@ -26,8 +26,8 @@ function ArtDumpsterMyDumpsterPage() {
       </div>
       {/* Grid Background SVG */}
       <img
-        src="/src/assets/Grid.svg"
-        className="fixed pt-[56px] top-0 left-0 w-screen h-screen object-cover -z-10"
+        src="/src/assets/Grid Line Background.svg"
+        className="fixed pt-[56px] top-0 left-0 w-screen h-screen object-cover -z-10 opacity-60"
         alt="background"
       />
     </>
