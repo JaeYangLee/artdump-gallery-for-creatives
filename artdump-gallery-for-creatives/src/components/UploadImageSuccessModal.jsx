@@ -10,10 +10,7 @@ function UploadImageSuccessModal({
   return (
     <>
       {/* Body Overlay */}
-      <div
-        onClick={OnUploadImageSuccessModalClose}
-        className="fixed inset-0 z-60 bg-black/60 flex flex-col items-center justify-center font-barlow"
-      >
+      <div className="fixed inset-0 z-60 bg-black/60 flex flex-col items-center justify-center font-barlow">
         <AnimatePresence>
           {/* Modal Container */}
           <motion.div

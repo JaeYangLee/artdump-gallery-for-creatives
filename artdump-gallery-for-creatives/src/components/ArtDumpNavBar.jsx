@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import ArtDumpsterBrandNameLogo from "../assets/ArtDumpsterBrandNameLogo";
 import { Link } from "react-router-dom";
 
 function ArtDumpNavBar() {
+  const [isSettingsOpen, setSettingsIsOpen] = useState(false);
+
+  const toggleSettingsDropdown = () => setSettingsIsOpen(!isSettingsOpen);
   return (
     <>
       {/* Body */}
@@ -63,26 +66,31 @@ function ArtDumpNavBar() {
                 <button>Add artwork</button>
               </div>
             </Link>
-            <div className="px-2 py-2 transform flex flex-col items-center border border-transparent rounded hover:bg-[#372F3D] hover:text-[#F8FAFC] hover:cursor-pointer hover:w-auto hover:h-auto hover:border hover:-translate-y-[2px] transition-all duration-300 ease-linear active:bg-[#2C2631] active:text-[#959697]">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                class="size-5"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M7.5 6a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM3.751 20.105a8.25 8.25 0 0 1 16.498 0 .75.75 0 0 1-.437.695A18.683 18.683 0 0 1 12 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 0 1-.437-.695Z"
-                  clip-rule="evenodd"
-                />
-              </svg>
+            <Link to="/ProfilePage">
+              <div className="px-2 py-2 transform flex flex-col items-center border border-transparent rounded hover:bg-[#372F3D] hover:text-[#F8FAFC] hover:cursor-pointer hover:w-auto hover:h-auto hover:border hover:-translate-y-[2px] transition-all duration-300 ease-linear active:bg-[#2C2631] active:text-[#959697]">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  class="size-5"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M7.5 6a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM3.751 20.105a8.25 8.25 0 0 1 16.498 0 .75.75 0 0 1-.437.695A18.683 18.683 0 0 1 12 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 0 1-.437-.695Z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
 
-              <button>Profile</button>
-            </div>
+                <button>Profile</button>
+              </div>
+            </Link>
           </div>
           {/* Left Section */}
           <div className="w-1/3 flex justify-end text-[14px] font-barlow font-medium text-[#372F3D]">
-            <div className="px-2 py-2 transform flex flex-col items-center border border-transparent rounded hover:bg-[#372F3D] hover:text-[#F8FAFC] hover:cursor-pointer hover:w-auto hover:h-auto hover:border hover:-translate-y-[2px] transition-all duration-300 ease-linear active:bg-[#2C2631] active:text-[#959697]">
+            <div
+              onClick={toggleSettingsDropdown}
+              className="px-2 py-2 transform flex flex-col items-center border border-transparent rounded hover:bg-[#372F3D] hover:text-[#F8FAFC] hover:cursor-pointer hover:w-auto hover:h-auto hover:border hover:-translate-y-[2px] transition-all duration-300 ease-linear active:bg-[#2C2631] active:text-[#959697]"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -98,6 +106,20 @@ function ArtDumpNavBar() {
 
               <button>Settings</button>
             </div>
+            {isSettingsOpen && (
+              <>
+                <div className="fixed mt-[56px] z-60 bg-[#F8FAFC] text-[18px] font-barlow font-medium shadow-2xl rounded-xl hover:cursor-pointer">
+                  <ul className="">
+                    <li className="p-2 pl-4 flex justify-start items-center w-[200px] h-[49px] transform transition-all ease-in duration-300 border-b  border-[#372F3D]/20 hover:bg-[#d3d5d7] active:bg-[#b6b8ba]">
+                      Theme toggle
+                    </li>
+                    <li className="p-2 pl-4 flex justify-start items-center transform transition-all ease-in duration-300 w-[200px] h-[49px] hover:bg-[#d3d5d7] active:bg-[#b6b8ba]">
+                      Log out
+                    </li>
+                  </ul>
+                </div>
+              </>
+            )}
           </div>
         </div>
       </div>

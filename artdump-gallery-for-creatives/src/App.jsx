@@ -5,6 +5,7 @@ import UploadImageSuccessModal from "./components/UploadImageSuccessModal";
 import ArtDumpsterAddArtworkPage from "./pages/ArtDumpsterAddArtworkPage";
 import ArtDumpsterHeroSectionPage from "./pages/ArtDumpsterHeroSectionPage";
 import ArtDumpsterMyDumpsterPage from "./pages/ArtDumpsterMyDumpsterPage";
+import ArtDumpsterProfilePage from "./pages/ArtDumpsterProfilePage";
 
 function App() {
   return (
@@ -19,6 +20,10 @@ function App() {
           <Route
             path="/AddArtworkPage"
             element={<ArtDumpsterAddArtworkPage />}
+          ></Route>
+          <Route
+            path="/ProfilePage"
+            element={<ArtDumpsterProfilePage />}
           ></Route>
         </Routes>
       </BrowserRouter>
