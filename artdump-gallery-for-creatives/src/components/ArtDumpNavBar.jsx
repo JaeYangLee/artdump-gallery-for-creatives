@@ -13,8 +13,11 @@ function ArtDumpNavBar() {
         {/* NavBar */}
         <div className="fixed top-0 pr-12 pl-12 flex flex-row items-center w-full h-[56px] border shadow-md z-50">
           {/* Right Section */}
+
           <div className="w-1/3 text-[14px] border-transparent hover:cursor-pointer hover:-translate-y-[4px] transition-all duration-300 ease-linear">
-            <ArtDumpsterBrandNameLogo />
+            <Link to="/">
+              <ArtDumpsterBrandNameLogo />
+            </Link>
           </div>
 
           {/* Middle Section */}
