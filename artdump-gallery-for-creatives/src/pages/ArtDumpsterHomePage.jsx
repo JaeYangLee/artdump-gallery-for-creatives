@@ -1,4 +1,4 @@
-import ArtDumpNavBar from "../components/ArtDumpNavBar";
+import ArtDumpNavBar from "../components/ArtDumpNavBar.jsx";
 import ArtDumpsterLogoIcon from "../assets/ArtDumpsterLogoIcon.jsx";
 
 function ArtDumpsterHeroSectionPage() {

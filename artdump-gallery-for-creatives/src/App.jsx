@@ -3,7 +3,7 @@ import "./index.css";
 import CancelValidatorModal from "./components/CancelValidatorModal";
 import UploadImageSuccessModal from "./components/UploadImageSuccessModal";
 import ArtDumpsterAddArtworkPage from "./pages/ArtDumpsterAddArtworkPage";
-import ArtDumpsterHeroSectionPage from "./pages/ArtDumpsterHeroSectionPage";
+import ArtDumpsterHeroSectionPage from "./pages/ArtDumpsterHomePage";
 import ArtDumpsterMyDumpsterPage from "./pages/ArtDumpsterMyDumpsterPage";
 import ArtDumpsterProfilePage from "./pages/ArtDumpsterProfilePage";
 
