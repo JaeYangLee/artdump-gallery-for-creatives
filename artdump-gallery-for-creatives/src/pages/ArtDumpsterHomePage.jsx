@@ -7,6 +7,10 @@ function ArtDumpsterHomePage() {
         <h1>Hello World!</h1>
       </div>
       <div></div>
+      <img
+        src="public/assets/Grid Line Background.svg"
+        alt="Background Image"
+      />
     </>
   );
 }

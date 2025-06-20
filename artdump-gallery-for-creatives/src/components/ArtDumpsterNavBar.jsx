@@ -3,7 +3,7 @@ import React from "react";
 function ArtDumpsterNavBar() {
   return (
     <>
-      <div className="bg-[#F8FAFC] min-w-screen h-[56px] flex flex-row items-center shadow-md">
+      <div className="bg-[#F8FAFC] min-w-screen h-[56px] fixed flex flex-row items-center shadow-md">
         <div className="p-2">
           <svg
             xmlns="http://www.w3.org/2000/svg"
