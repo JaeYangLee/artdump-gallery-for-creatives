@@ -1,10 +1,10 @@
+import ArtDumpsterNavBar from "./components/ArtDumpsterNavBar";
 import "./index.css";
 
 function App() {
   return (
     <>
-      <h1>Hello World!</h1>
-      <h1>ArtDumpster* Redevelopment!</h1>
+      <ArtDumpsterNavBar />
     </>
   );
 }
