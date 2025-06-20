@@ -1,16 +1,14 @@
 import React from "react";
+import backgroundImage from "public/assets/grid-line-background-image.svg";
 
 function ArtDumpsterHomePage() {
   return (
     <>
-      <div className="w-screen min-h-screen bg-[lightgray]">
-        <h1>Hello World!</h1>
+      <div className="w-screen min-h-screen">
+        <div className="">
+          <h1>Hello World!</h1>
+        </div>
       </div>
-      <div></div>
-      <img
-        src="public/assets/Grid Line Background.svg"
-        alt="Background Image"
-      />
     </>
   );
 }
