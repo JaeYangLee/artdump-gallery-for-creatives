@@ -1,6 +1,19 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 function ArtDumpsterNavBar() {
+  const navigate = useNavigate();
+
+  const handleHomePage = () => {
+    navigate("/");
+  };
+  const handleMyDumpster = () => {
+    navigate("/MyDumpster");
+  };
+  const handleAddArtwork = () => {
+    navigate("/AddArtwork");
+  };
+
   return (
     <>
       <div className="bg-[#F8FAFC] min-w-screen h-[56px] fixed flex flex-row justify-between md:gap-[20%] lg:gap-[24%] xl:gap-[28%] items-center shadow-md">
@@ -25,8 +38,12 @@ function ArtDumpsterNavBar() {
             <path d="M1059.22 71.25C1058.28 71.25 1057.55 70.9834 1057.02 70.45C1056.48 69.9167 1056.22 69.1833 1056.22 68.25L1056.42 54.85C1056.42 54.45 1056.28 54.1834 1056.02 54.05C1055.75 53.9167 1055.48 53.9833 1055.22 54.25L1042.02 61.85C1041.35 62.25 1040.82 62.45 1040.42 62.45C1039.48 62.45 1038.68 61.9167 1038.02 60.85L1030.42 46.85C1030.15 46.45 1030.02 45.9834 1030.02 45.45C1030.02 44.25 1030.62 43.3833 1031.82 42.85L1045.02 36.25C1045.68 35.85 1045.68 35.45 1045.02 35.05L1031.82 28.85C1030.62 28.1834 1030.02 27.3167 1030.02 26.25C1030.02 25.5833 1030.15 25.05 1030.42 24.65L1038.02 10.85C1038.68 9.78335 1039.48 9.25002 1040.42 9.25002C1041.08 9.25002 1041.62 9.38335 1042.02 9.65001L1055.22 17.25C1055.48 17.3833 1055.75 17.3833 1056.02 17.25C1056.28 17.1167 1056.42 16.85 1056.42 16.45L1056.22 3.45001C1056.22 2.51668 1056.48 1.78335 1057.02 1.25002C1057.55 0.716681 1058.28 0.450012 1059.22 0.450012H1074.02C1074.95 0.450012 1075.68 0.716681 1076.22 1.25002C1076.75 1.78335 1077.02 2.51668 1077.02 3.45001L1076.82 16.45C1076.82 16.85 1076.95 17.1167 1077.22 17.25C1077.48 17.3833 1077.75 17.3833 1078.02 17.25L1091.22 9.65001C1091.62 9.38335 1092.15 9.25002 1092.82 9.25002C1093.75 9.25002 1094.55 9.78335 1095.22 10.85L1102.82 24.65C1103.08 25.05 1103.22 25.5833 1103.22 26.25C1103.22 27.1834 1102.62 27.9834 1101.42 28.65L1087.82 35.05C1087.02 35.45 1087.02 35.85 1087.82 36.25L1101.42 42.85C1102.62 43.3833 1103.22 44.25 1103.22 45.45C1103.22 46.1167 1103.08 46.65 1102.82 47.05L1095.22 60.85C1094.55 61.9167 1093.75 62.45 1092.82 62.45C1092.28 62.45 1091.75 62.25 1091.22 61.85L1078.02 54.25C1077.75 53.9833 1077.48 53.9167 1077.22 54.05C1076.95 54.1834 1076.82 54.45 1076.82 54.85L1077.02 68.25C1077.02 69.1833 1076.75 69.9167 1076.22 70.45C1075.68 70.9834 1074.95 71.25 1074.02 71.25H1059.22Z" />
           </svg>
         </div>
+
         <div className="hidden md:flex justify-center items-center gap-4 text-xs text-[#372F3D] ">
-          <div className="p-2 hover:bg-[#372F3D] hover:text-[#F8FAFC] transition ease-in duration-200 hover:cursor-pointer">
+          <div
+            onClick={handleHomePage}
+            className="p-2 hover:bg-[#372F3D] hover:text-[#F8FAFC] transition ease-in duration-200 hover:cursor-pointer"
+          >
             <a href="" className="flex flex-col items-center justify-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -41,7 +58,11 @@ function ArtDumpsterNavBar() {
               Home
             </a>
           </div>
-          <div className="p-2 md:p-1 lg:p-1 xl:p-2 hover:bg-[#372F3D] hover:text-[#F8FAFC]">
+
+          <div
+            onClick={handleMyDumpster}
+            className="p-2 md:p-1 lg:p-1 xl:p-2 hover:bg-[#372F3D] hover:text-[#F8FAFC]"
+          >
             <a
               href=""
               className="flex flex-col items-center justify-center transition duration-200 ease-in hover:cursor-pointer"
@@ -67,7 +88,7 @@ function ArtDumpsterNavBar() {
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="currentColor"
-                class="size-6"
+                className="size-6"
                 alt="Add Artwork Button"
               >
                 <path
@@ -80,7 +101,7 @@ function ArtDumpsterNavBar() {
             </a>
           </div>
         </div>
-        <div className="p-2 ml-auto lg:p-4 xl:p-8">
+        <div onClick={handleAddArtwork} className="p-2 ml-auto lg:p-4 xl:p-8">
           <div className="p-2 md:p-1 lg:p-1 xl:p-2 hover:bg-[#372F3D] hover:text-[#F8FAFC] text-xs hidden md:flex">
             <a
               href=""
