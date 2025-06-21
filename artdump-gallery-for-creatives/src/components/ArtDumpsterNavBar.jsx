@@ -17,7 +17,7 @@ function ArtDumpsterNavBar() {
   return (
     <>
       <div className="bg-[#F8FAFC] min-w-screen h-[56px] fixed flex flex-row justify-between md:gap-[20%] lg:gap-[24%] xl:gap-[28%] items-center shadow-md">
-        <div className="p-2 lg:p-4 xl:p-8">
+        <div onClick={handleHomePage} className="p-2 lg:p-4 xl:p-8">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 1104 186"
@@ -79,7 +79,10 @@ function ArtDumpsterNavBar() {
               My Dumpster
             </a>
           </div>
-          <div className="p-2 md:p-1 lg:p-1 xl:p-2 hover:bg-[#372F3D] hover:text-[#F8FAFC]">
+          <div
+            onClick={handleAddArtwork}
+            className="p-2 md:p-1 lg:p-1 xl:p-2 hover:bg-[#372F3D] hover:text-[#F8FAFC]"
+          >
             <a
               href=""
               className="flex flex-col items-center justify-center transition duration-200 ease-in hover:cursor-pointer"
@@ -101,7 +104,7 @@ function ArtDumpsterNavBar() {
             </a>
           </div>
         </div>
-        <div onClick={handleAddArtwork} className="p-2 ml-auto lg:p-4 xl:p-8">
+        <div className="p-2 ml-auto lg:p-4 xl:p-8">
           <div className="p-2 md:p-1 lg:p-1 xl:p-2 hover:bg-[#372F3D] hover:text-[#F8FAFC] text-xs hidden md:flex">
             <a
               href=""
