@@ -16,7 +16,7 @@ function ArtDumpsterNavBar() {
 
   return (
     <>
-      <div className="bg-[#F8FAFC] min-w-screen h-[56px] fixed flex flex-row justify-between md:gap-[20%] lg:gap-[24%] xl:gap-[28%] items-center shadow-md">
+      <div className="bg-[#F8FAFC] min-w-screen h-[56px] fixed flex flex-row justify-between md:gap-[20%] lg:gap-[24%] xl:gap-[24%] items-center shadow-md">
         <div onClick={handleHomePage} className="p-2 lg:p-4 xl:p-8">
           <svg
             xmlns="http://www.w3.org/2000/svg"
