@@ -8,8 +8,8 @@ import ArtDumpsterAddArtworkPage from "./pages/ArtDumpsterAddArtworkPage";
 function App() {
   return (
     <>
-      <ArtDumpsterNavBar className="fixed top-0 z-90" />
-      <Routes>
+      <ArtDumpsterNavBar className="fixed top-0 z-60" />
+      <Routes className="z-50">
         <Route path="/" element={<ArtDumpsterHomePage />}></Route>
 
         <Route
