@@ -11,7 +11,7 @@ function ArtDumpsterMyDupmsterPage() {
             <h1 className="font-bold">Dumpster!</h1>
           </div>
         </header>
-        <div className="flex flex-col flex-wrap items-center justify-center gap-0 md:flex-row md:justify-center lg:justify-center lg:flex-row xl:justify-center ">
+        <div className="flex flex-col flex-wrap items-center justify-center gap-0 md:flex-row md:justify-center lg:justify-center lg:flex-row xl:justify-center">
           <ArtDumpsterArtworkCard />
           <ArtDumpsterArtworkCard />
           <ArtDumpsterArtworkCard />
