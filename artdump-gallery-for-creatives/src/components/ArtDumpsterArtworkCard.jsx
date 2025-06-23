@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-import ArtDumpArtworkDisplayModal from "src/components/ArtDumpArtworkDisplayModal.jsx";
+import ArtDumpArtworkDisplayModal from "./ArtDumpArtworkDisplayModal.jsx";
 
 function ArtDumpsterArtworkCard() {
-  const [isArtworkDisplayOpen, onArtworkDisplayClose] = useState(false);
+  const [isArtworkDisplayOpen, setArtworkDisplayOpen] = useState(false);
   return (
     <>
       <div
         className="z-30 p-4 transition duration-100 ease-in-out active:scale-90"
-        onClick={() => isArtworkDisplayModalOpen(true)}
+        onClick={() => setArtworkDisplayOpen(true)}
       >
         <div className=" group pb-2 flex flex-col items-center justify-end w-[288px] md:w-[328px] h-[300px] md:h-[320px] lg:h-[340px] lg:w-[308px] xl:w-[408px] xl:h-[380px] bg-[#F8FAFC] shadow-xl shadow-black/30 hover:text-[#F8FAFC]">
           <div className="relative w-full h-full">
@@ -33,7 +33,7 @@ function ArtDumpsterArtworkCard() {
 
       <ArtDumpArtworkDisplayModal
         isArtworkDisplayModalOpen={isArtworkDisplayOpen}
-        onArtworkDisplayClose={() => onArtworkDisplayClose(true)}
+        onArtworkDisplayModalClose={() => setArtworkDisplayOpen(false)}
       />
     </>
   );
