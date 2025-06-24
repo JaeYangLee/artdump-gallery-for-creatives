@@ -2,7 +2,7 @@ import "./index.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ArtDumpsterHomePage from "./pages/ArtDumpsterHomePage";
 import ArtDumpsterNavBar from "./components/ArtDumpsterNavBar";
-import ArtDumpsterMyDumpsterPage from "./pages/ArtDumpsterMyDupmsterPage";
+import ArtDumpsterMyDumpsterPage from "./pages/ArtDumpsterMyDumpsterPage";
 import ArtDumpsterAddArtworkPage from "./pages/ArtDumpsterAddArtworkPage";
 
 function App() {
