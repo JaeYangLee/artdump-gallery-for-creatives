@@ -12,23 +12,26 @@ function ArtDumpArtworkDisplayModal({
         className="fixed top-0 flex items-center justify-center w-screen min-h-screen p-2 xl:p-8 bg-black/70 z-60 font-barlow"
         onClick={onArtworkDisplayModalClose}
       >
+        {/* Parent Container */}
         <div
-          className="xl:pt-0 pt-8 relative flex items-center justify-center w-screen h-[580px]"
+          className="relative flex items-center justify-center w-screen h-[580px] "
           onClick={(e) => e.stopPropagation()}
         >
           {/* Child Container 1 */}
-          <div className="absolute flex flex-col items-center w-full h-full">
+          <div className="absolute flex flex-col items-center w-full h-full pt-0 md:p-4 lg:p-8 lg:pt-0 xl:p-0 xl:pb-8">
             {/* Child Container 2 */}
-            <div className="p-2 border-b border-black/20 w-full h-14 bg-[#F8FAFC]">
+            <div className="p-2 lg:p-4 border-b border-black/20 w-full h-14 bg-[#F8FAFC] shadow-lg shadow-black">
               <header className="flex flex-row items-center justify-between w-full h-full">
-                <h1 className="text-base font-medium">Project Title</h1>
+                <h1 className="text-base font-medium md:text-lg lg:text-2xl">
+                  Project Title
+                </h1>
                 <div className="flex flex-row items-center gap-4">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                     fill="currentColor"
                     alt="Artwork Settings Button"
-                    className="size-6"
+                    className="size-6 lg:size-7"
                   >
                     <path
                       fill-rule="evenodd"
@@ -41,7 +44,7 @@ function ArtDumpArtworkDisplayModal({
                     viewBox="0 0 24 24"
                     fill="currentColor"
                     alt="X icon"
-                    className="size-6"
+                    className="size-6 lg:size-7"
                     onClick={onArtworkDisplayModalClose}
                   >
                     <path
@@ -66,14 +69,16 @@ function ArtDumpArtworkDisplayModal({
               {/* Child Container 5 */}
               <div className="flex flex-col md:justify-between w-full h-[40%] md:w-[30%] md:h-full bg-[#F8FAFC]">
                 <div className="m-2 w-auto h-[40%] md:min-h-[60%] p-2 border rounded-lg border-[#372F3D]/40">
-                  <p className="text-xs italic light text-[#372F3D]/70">
+                  <p className="text-xs italic light lg:text-base text-[#372F3D]/70">
                     "Artwork description..."
                   </p>
                 </div>
                 <div>
-                  <h2 className="p-2 text-sm font-medium">Status</h2>
+                  <h2 className="p-2 text-sm font-medium xl:p-4 md:text-base lg:text-lg">
+                    Status
+                  </h2>
                   <hr className="w-auto opacity-30"></hr>
-                  <ul className="p-2 text-xs font-medium">
+                  <ul className="p-2 text-xs font-medium xl:p-4 lg:text-base">
                     <li>Published:</li>
                     <li>Medium:</li>
                     <li>Tools:</li>
