@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ArtDumpArtworkDisplayModal from "./ArtDumpArtworkDisplayModal.jsx";
+import ArtDumpsterArtworkDisplayModal from "./ArtDumpsterArtworkDisplayModal.jsx";
 
 function ArtDumpsterArtworkCard() {
   const [isArtworkDisplayOpen, setArtworkDisplayOpen] = useState(false);
@@ -31,7 +31,7 @@ function ArtDumpsterArtworkCard() {
         </div>
       </div>
 
-      <ArtDumpArtworkDisplayModal
+      <ArtDumpsterArtworkDisplayModal
         isArtworkDisplayModalOpen={isArtworkDisplayOpen}
         onArtworkDisplayModalClose={() => setArtworkDisplayOpen(false)}
       />

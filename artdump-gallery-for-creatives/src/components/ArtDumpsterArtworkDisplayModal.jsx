@@ -1,25 +1,23 @@
 import React, { useState } from "react";
+import ArtDumpsterArtworkSettings from "./ArtDumpsterArtworkSettings.jsx";
 
-function ArtDumpArtworkDisplayModal({
+function ArtDumpsterArtworkDisplayModal({
   isArtworkDisplayModalOpen,
   onArtworkDisplayModalClose,
 }) {
+  const [isArtworkSettingsOpen, setArtworkSettingsOpen] = useState(false);
   if (!isArtworkDisplayModalOpen) return null;
   return (
     <>
-      {/* Backdrop Container */}
       <div
         className="fixed top-0 flex items-center justify-center w-screen min-h-screen p-2 xl:p-8 bg-black/70 z-60 font-barlow"
         onClick={onArtworkDisplayModalClose}
       >
-        {/* Parent Container */}
         <div
-          className="relative flex items-center justify-center w-screen h-[580px] "
+          className="parentContainer relative flex items-center justify-center w-screen h-[580px] "
           onClick={(e) => e.stopPropagation()}
         >
-          {/* Child Container 1 */}
-          <div className="absolute flex flex-col items-center w-full h-full pt-0 md:p-4 lg:p-8 lg:pt-0 xl:p-0 xl:pb-8">
-            {/* Child Container 2 */}
+          <div className="absolute flex flex-col items-center w-full h-full pt-0 md:p-4 lg:p-8 lg:pt-0 xl:p-0 xl:pb-8 text-[#2C2631]">
             <div className="p-2 lg:p-4 border-b border-black/20 w-full h-14 bg-[#F8FAFC] shadow-lg shadow-black">
               <header className="flex flex-row items-center justify-between w-full h-full">
                 <h1 className="text-base font-medium md:text-lg lg:text-2xl">
@@ -32,6 +30,7 @@ function ArtDumpArtworkDisplayModal({
                     fill="currentColor"
                     alt="Artwork Settings Button"
                     className="size-6 lg:size-7"
+                    onClick={() => setArtworkSettingsOpen(true)}
                   >
                     <path
                       fill-rule="evenodd"
@@ -56,9 +55,8 @@ function ArtDumpArtworkDisplayModal({
                 </div>
               </header>
             </div>
-            {/* Child Container 3 */}
+
             <div className="flex flex-col items-center w-full h-full md:flex-row">
-              {/* Child Container 4 */}
               <div className="w-full bg-[#161618] h-[60%] md:w-[70%] md:h-full">
                 <img
                   src="public/assets/sasuke-retrieval-arc.jpeg"
@@ -66,7 +64,7 @@ function ArtDumpArtworkDisplayModal({
                   className="object-contain w-full h-full"
                 />
               </div>
-              {/* Child Container 5 */}
+
               <div className="flex flex-col md:justify-between w-full h-[40%] md:w-[30%] md:h-full bg-[#F8FAFC]">
                 <div className="m-2 w-auto h-[40%] md:min-h-[60%] p-2 border rounded-lg border-[#372F3D]/40">
                   <p className="text-xs italic light lg:text-base text-[#372F3D]/70">
@@ -90,8 +88,12 @@ function ArtDumpArtworkDisplayModal({
           </div>
         </div>
       </div>
+      <ArtDumpsterArtworkSettings
+        isArtDumpsterArtworkSettingsOpen={isArtworkSettingsOpen}
+        onArtDumpsterArtworkSettingsClose={() => setArtworkSettingsOpen(false)}
+      />
     </>
   );
 }
 
-export default ArtDumpArtworkDisplayModal;
+export default ArtDumpsterArtworkDisplayModal;
