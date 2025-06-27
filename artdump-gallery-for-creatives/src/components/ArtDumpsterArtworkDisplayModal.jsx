@@ -29,7 +29,7 @@ function ArtDumpsterArtworkDisplayModal({
                     viewBox="0 0 24 24"
                     fill="currentColor"
                     alt="Artwork Settings Button"
-                    className="size-6 lg:size-7"
+                    className="size-6 lg:size-7 hover:cursor-pointer"
                     onClick={() => setArtworkSettingsOpen(true)}
                   >
                     <path
@@ -43,7 +43,7 @@ function ArtDumpsterArtworkDisplayModal({
                     viewBox="0 0 24 24"
                     fill="currentColor"
                     alt="X icon"
-                    className="size-6 lg:size-7"
+                    className="size-6 lg:size-7 hover:cursor-pointer"
                     onClick={onArtworkDisplayModalClose}
                   >
                     <path
