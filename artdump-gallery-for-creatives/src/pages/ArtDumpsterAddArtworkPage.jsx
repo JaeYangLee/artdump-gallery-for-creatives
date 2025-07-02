@@ -49,56 +49,58 @@ function ArtDumpsterAddArtworkPage() {
                 </label>
                 <input
                   required
+                  id="projectTitle"
                   type="text"
                   placeholder="Enter project title..."
-                  className="p-2 bg-gray-200 border border-gray-300 rounded-lg"
+                  className="p-2 bg-gray-200 border border-gray-300 rounded-lg focus:border-purple-500 focus:outline invalid:border-red-500 valid:border-green-500"
                 />
               </div>
               <div className="flex flex-col">
-                <label htmlFor="projectTitle" className="font-bold">
+                <label htmlFor="projectDescription" className="font-bold">
                   Description
                 </label>
                 <textarea
                   required
+                  id="projectDescription"
                   type="text"
                   rows="5"
                   placeholder="Enter project description..."
-                  className="p-2 bg-gray-200 border border-gray-300 rounded-lg"
+                  className="p-2 bg-gray-200 border border-gray-300 rounded-lg focus:border-purple-500 focus:outline invalid:border-red-500 valid:border-green-500"
                 />
               </div>
               <div className="flex flex-col">
-                <label htmlFor="projectTitle" className="font-bold">
+                <label htmlFor="projectMedium" className="font-bold">
                   Medium
                 </label>
                 <select
                   required
-                  id=""
-                  className="p-2 text-[#372F3D] bg-gray-200 border border-gray-300 rounded-lg"
+                  id="projectMedium"
+                  className="p-2 text-[#372F3D] bg-gray-200 border border-gray-300 rounded-lg focus:border-purple-500 focus:outline invalid:border-red-500 valid:border-green-500"
                 >
                   <option value="">Select a medium</option>
                   <option value="">Example 1</option>
                 </select>
               </div>
               <div className="flex flex-col">
-                <label htmlFor="projectTitle" className="font-bold">
+                <label htmlFor="projectTool" className="font-bold">
                   Tools
                 </label>
                 <select
                   required
-                  id=""
-                  className="p-2 text-[#372F3D] bg-gray-200 border border-gray-300 rounded-lg"
+                  id="projectTool"
+                  className="p-2 text-[#372F3D] bg-gray-200 border border-gray-300 rounded-lg focus:border-purple-500 focus:outline invalid:border-red-500 valid:border-green-500"
                 >
                   <option value="">Select a tool</option>
                 </select>
               </div>
               <div className="flex flex-col">
-                <label htmlFor="projectTitle" className="font-bold">
+                <label htmlFor="projectGenre" className="font-bold">
                   Genre
                 </label>
                 <select
                   required
-                  id=""
-                  className="p-2 text-[#372F3D] bg-gray-200 border border-gray-300 rounded-lg"
+                  id="projectGenre"
+                  className="p-2 text-[#372F3D] bg-gray-200 border border-gray-300 rounded-lg focus:border-purple-500 focus:outline invalid:border-red-500 valid:border-green-500"
                 >
                   <option value="">Select a genre</option>
                 </select>
