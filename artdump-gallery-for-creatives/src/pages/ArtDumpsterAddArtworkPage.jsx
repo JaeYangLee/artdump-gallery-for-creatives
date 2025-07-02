@@ -9,10 +9,10 @@ function ArtDumpsterAddArtworkPage() {
           <h1 className="text-3xl font-bold text-shadow-md">Add an artwork!</h1>
         </header>
 
-        <div className="relative w-screen h-auto p-2 shadow-lg">
+        <div className="relative w-screen h-auto p-2">
           <div className="flex flex-col md:flex-row md:items-start p-2 w-full h-full bg-[#F8FAFC] shadow-lg">
             {/* Upload Section */}
-            <div className="flex flex-col items-center justify-center w-full h-full bg-gray-200 md:w-128 md:h-full">
+            <div className="flex flex-col items-center justify-center w-full bg-gray-200 h-80 md:w-128 md:h-full">
               <div className="flex flex-col items-center justify-center w-full h-full border-2 border-gray-300 border-dashed">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
