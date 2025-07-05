@@ -4,6 +4,7 @@ import ArtDumpsterHomePage from "./pages/ArtDumpsterHomePage";
 import ArtDumpsterNavBar from "./components/ArtDumpsterNavBar";
 import ArtDumpsterMyDumpsterPage from "./pages/ArtDumpsterMyDumpsterPage";
 import ArtDumpsterAddArtworkPage from "./pages/ArtDumpsterAddArtworkPage";
+import ArtDumpsterSettingsPage from "./pages/ArtDumpsterSettingsPage";
 
 function App() {
   return (
@@ -21,6 +22,8 @@ function App() {
           path="/AddArtwork"
           element={<ArtDumpsterAddArtworkPage />}
         ></Route>
+
+        <Route path="/Settings" element={<ArtDumpsterSettingsPage />}></Route>
       </Routes>
     </>
   );
