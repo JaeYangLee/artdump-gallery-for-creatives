@@ -36,7 +36,7 @@ function ArtDumpsterMobilePopUpNavBar({
           onClick={(e) => e.stopPropagation()}
         >
           <div
-            className="flex flex-row items-center justify-start w-full gap-2 p-2"
+            className="flex flex-row items-center justify-start w-full gap-2 p-2 hover:bg-gray-200 active:bg-gray-300"
             onClick={handleHomePage}
           >
             <svg
@@ -51,7 +51,8 @@ function ArtDumpsterMobilePopUpNavBar({
             <a href="">Home</a>
           </div>
           <div
-            className="flex flex-row items-center justify-start w-full gap-2 p-2"
+            className="flex flex-row items-center justify-start w-full gap-2 p-2 hover:bg-gray-200 active:bg-gray-300"
+            hover:bg-gray-200
             onClick={handleMyDumpster}
           >
             <svg
@@ -66,7 +67,7 @@ function ArtDumpsterMobilePopUpNavBar({
             <a href="">My Dumpster</a>
           </div>
           <div
-            className="flex flex-row items-center justify-start w-full gap-2 p-2"
+            className="flex flex-row items-center justify-start w-full gap-2 p-2 hover:bg-gray-200 active:bg-gray-300"
             onClick={handleAddArtwork}
           >
             <svg
@@ -86,7 +87,7 @@ function ArtDumpsterMobilePopUpNavBar({
           </div>
 
           <div
-            className="absolute flex flex-row items-center justify-start w-full gap-2 p-2 bottom-8"
+            className="absolute flex flex-row items-center justify-start w-full gap-2 p-2 bottom-8 hover:bg-gray-200 active:bg-gray-300"
             onClick={handleSettingsPage}
           >
             <svg
