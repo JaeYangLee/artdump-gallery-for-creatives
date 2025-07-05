@@ -112,11 +112,11 @@ function ArtDumpsterAddArtworkPage() {
               <div className="flex flex-row items-end justify-end gap-2 lg:text-lg lg:pt-8 xl:pt-4">
                 <button
                   type="submit"
-                  className="p-2 font-bold text-white bg-purple-500 border border-transparent rounded-lg "
+                  className="p-2 font-bold text-white bg-purple-500 border border-transparent rounded-lg hover:bg-purple-700 active:bg-purple-800"
                 >
                   Submit
                 </button>
-                <button className="p-2 border border-gray-300 rounded-lg">
+                <button className="p-2 border border-gray-300 rounded-lg text-gray-500 bg-gray-200 hover:bg-gray-300 active:bg-gray-400 active:text-[#F8FAFC]">
                   Cancel
                 </button>
               </div>
