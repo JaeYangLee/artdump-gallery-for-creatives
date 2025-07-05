@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import ArtDumpsterMobilePopUpNavBar from "./ArtDumpsterMobilePopUpNavBar";
 
 function ArtDumpsterNavBar() {
   const navigate = useNavigate();
+  const [isMobilePopUpNavBarOpen, setMobilePopUpNavBarOpen] = useState(false);
 
   const handleHomePage = () => {
     navigate("/");
@@ -12,6 +14,9 @@ function ArtDumpsterNavBar() {
   };
   const handleAddArtwork = () => {
     navigate("/AddArtwork");
+  };
+  const handleSettingsPage = () => {
+    navigate("/Settings");
   };
 
   return (
@@ -105,7 +110,10 @@ function ArtDumpsterNavBar() {
           </div>
         </div>
         <div className="p-2 ml-auto lg:p-4 xl:p-8">
-          <div className="p-2 md:p-1 lg:p-1 xl:p-2 hover:bg-[#372F3D] hover:text-[#F8FAFC] text-xs hidden md:flex">
+          <div
+            className="p-2 md:p-1 lg:p-1 xl:p-2 hover:bg-[#372F3D] hover:text-[#F8FAFC] text-xs hidden md:flex"
+            onClick={handleSettingsPage}
+          >
             <a
               href=""
               className="flex flex-col items-center justify-center transition duration-200 ease-in hover:cursor-pointer"
@@ -133,7 +141,9 @@ function ArtDumpsterNavBar() {
             viewBox="0 0 24 24"
             stroke-width="2"
             stroke="currentColor"
+            alt="Mobile Setting Button"
             className="text-[#372F3D] size-6 md:hidden"
+            onClick={() => setMobilePopUpNavBarOpen(true)}
           >
             <path
               stroke-linecap="round"
@@ -143,6 +153,11 @@ function ArtDumpsterNavBar() {
           </svg>
         </div>
       </div>
+
+      <ArtDumpsterMobilePopUpNavBar
+        isMobilePopUpNavBarOpen={isMobilePopUpNavBarOpen}
+        onMobilePopUpNavBarClose={() => setMobilePopUpNavBarOpen(false)}
+      />
     </>
   );
 }
