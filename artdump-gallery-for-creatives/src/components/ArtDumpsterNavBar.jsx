@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import ArtDumpsterMobilePopUpNavBar from "./ArtDumpsterMobilePopUpNavBar";
+import ArtDumpsterMobilePopUpSideBar from "./ArtDumpsterMobilePopUpSideBar";
 
 function ArtDumpsterNavBar() {
   const navigate = useNavigate();
-  const [isMobilePopUpNavBarOpen, setMobilePopUpNavBarOpen] = useState(false);
+  const [isMobilePopUpSideBarOpen, setMobilePopUpSideBarOpen] = useState(false);
 
   const handleHomePage = () => {
     navigate("/");
@@ -143,7 +143,7 @@ function ArtDumpsterNavBar() {
             stroke="currentColor"
             alt="Mobile Setting Button"
             className="text-[#372F3D] size-6 md:hidden"
-            onClick={() => setMobilePopUpNavBarOpen(true)}
+            onClick={() => setMobilePopUpSideBarOpen(true)}
           >
             <path
               stroke-linecap="round"
@@ -154,9 +154,9 @@ function ArtDumpsterNavBar() {
         </div>
       </div>
 
-      <ArtDumpsterMobilePopUpNavBar
-        isMobilePopUpNavBarOpen={isMobilePopUpNavBarOpen}
-        onMobilePopUpNavBarClose={() => setMobilePopUpNavBarOpen(false)}
+      <ArtDumpsterMobilePopUpSideBar
+        isMobilePopUpSideBarOpen={isMobilePopUpSideBarOpen}
+        onMobilePopUpSideBarClose={() => setMobilePopUpSideBarOpen(false)}
       />
     </>
   );
