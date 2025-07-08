@@ -1,27 +1,25 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import ArtDumpsterSettingsSideBar from "./ArtDumpsterSettingsSideBar";
 
 function ArtDumpsterMobilePopUpSideBar({
   isMobilePopUpSideBarOpen,
   onMobilePopUpSideBarClose,
 }) {
   const navigate = useNavigate();
+  const [isSettingsSideBarOpen, setSettingsSideBarOpen] = useState(false);
 
   const handleHomePage = () => {
-    onMobilePopUpSideBarClose();
     navigate("/");
   };
   const handleMyDumpster = () => {
     navigate("/MyDumpster");
-    onMobilePopUpSideBarClose();
   };
   const handleAddArtwork = () => {
     navigate("/AddArtwork");
-    onMobilePopUpSideBarClose();
   };
   const handleSettingsPage = () => {
-    navigate("/Settings");
-    onMobilePopUpSideBarClose();
+    setSettingsSideBarOpen(true);
   };
 
   if (!isMobilePopUpSideBarOpen) return false;
@@ -106,6 +104,10 @@ function ArtDumpsterMobilePopUpSideBar({
           </div>
         </div>
       </div>
+      <ArtDumpsterSettingsSideBar
+        isSettingsSideBarOpen={isSettingsSideBarOpen}
+        onSettingsSideBarClose={() => setSettingsSideBarOpen(false)}
+      />
     </>
   );
 }
