@@ -1,13 +1,11 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import ArtDumpsterSettingsSideBar from "./ArtDumpsterSettingsSideBar";
 
 function ArtDumpsterMobilePopUpSideBar({
   isMobilePopUpSideBarOpen,
   onMobilePopUpSideBarClose,
 }) {
   const navigate = useNavigate();
-  const [isSettingsSideBarOpen, setSettingsSideBarOpen] = useState(false);
 
   const handleHomePage = () => {
     navigate("/");
@@ -104,10 +102,6 @@ function ArtDumpsterMobilePopUpSideBar({
           </div>
         </div>
       </div>
-      <ArtDumpsterSettingsSideBar
-        isSettingsSideBarOpen={isSettingsSideBarOpen}
-        onSettingsSideBarClose={() => setSettingsSideBarOpen(false)}
-      />
     </>
   );
 }
