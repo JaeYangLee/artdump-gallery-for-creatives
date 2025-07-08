@@ -1,5 +1,4 @@
 import React from "react";
-import ArtDumpsterArtworkUploadCard from "../components/ArtDumpsterArtworkUploadCard";
 
 function ArtDumpsterAddArtworkPage() {
   return (
