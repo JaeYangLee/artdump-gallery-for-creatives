@@ -9,15 +9,19 @@ function ArtDumpsterMobilePopUpSideBar({
 
   const handleHomePage = () => {
     navigate("/");
+    onMobilePopUpSideBarClose(false);
   };
   const handleMyDumpster = () => {
     navigate("/MyDumpster");
+    onMobilePopUpSideBarClose(false);
   };
   const handleAddArtwork = () => {
     navigate("/AddArtwork");
+    onMobilePopUpSideBarClose(false);
   };
   const handleSettingsPage = () => {
-    setSettingsSideBarOpen(true);
+    navigate("/Settings");
+    onMobilePopUpSideBarClose(false);
   };
 
   if (!isMobilePopUpSideBarOpen) return false;
