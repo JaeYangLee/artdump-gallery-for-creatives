@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import ArtDumpsterSettingsSideBar from "./ArtDumpsterSettingsSideBar";
 
 function ArtDumpsterMobilePopUpSideBar({
   isMobilePopUpSideBarOpen,
   onMobilePopUpSideBarClose,
 }) {
   const navigate = useNavigate();
+  const [isSettingsSideBarOpen, setSettingsSideBarOpen] = useState(false);
 
   const handleHomePage = () => {
     navigate("/");
@@ -15,6 +17,9 @@ function ArtDumpsterMobilePopUpSideBar({
   };
   const handleAddArtwork = () => {
     navigate("/AddArtwork");
+  };
+  const handleSettingsPage = () => {
+    setSettingsSideBarOpen(true);
   };
 
   if (!isMobilePopUpSideBarOpen) return false;
@@ -79,7 +84,10 @@ function ArtDumpsterMobilePopUpSideBar({
             <a href="">Add Artwork</a>
           </div>
 
-          <div className="absolute flex flex-row items-center justify-start w-full gap-2 p-2 bottom-8 hover:bg-[#372F3D] hover:text-[#F8FAFC] hover:cursor-pointer active:bg-gray-300">
+          <div
+            className="absolute flex flex-row items-center justify-start w-full gap-2 p-2 bottom-8 hover:bg-[#372F3D] hover:text-[#F8FAFC] hover:cursor-pointer active:bg-gray-300"
+            onClick={handleSettingsPage}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -96,6 +104,10 @@ function ArtDumpsterMobilePopUpSideBar({
           </div>
         </div>
       </div>
+      <ArtDumpsterSettingsSideBar
+        isSettingsSideBarOpen={isSettingsSideBarOpen}
+        onSettingsSideBarClose={() => setSettingsSideBarOpen(false)}
+      />
     </>
   );
 }
