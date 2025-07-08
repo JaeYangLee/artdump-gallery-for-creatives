@@ -22,8 +22,6 @@ function App() {
           path="/AddArtwork"
           element={<ArtDumpsterAddArtworkPage />}
         ></Route>
-
-        <Route path="/Settings" element={<ArtDumpsterSettingsPage />}></Route>
       </Routes>
     </>
   );
